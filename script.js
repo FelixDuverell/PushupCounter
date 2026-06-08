@@ -7,6 +7,15 @@ const statusElement = document.getElementById('status');
 let pushupCount = 0;
 let isDown = false;
 
+// Function to reset the counter
+function resetCounter() {
+    pushupCount = 0;
+    isDown = false;
+    countElement.innerText = pushupCount;
+    statusElement.innerText = "Get in position!";
+    statusElement.style.color = "#8A2BE2";
+}
+
 // Function to calculate the angle between three points
 function calculateAngle(a, b, c) {
     let radians = Math.atan2(c.y - b.y, c.x - b.x) - Math.atan2(a.y - b.y, a.x - b.x);
